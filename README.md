@@ -33,6 +33,25 @@ _Note_: If your Wolfram Engine path should ever change, you need to run the conf
 ## Windows
 The Windows installation is slightly more involved. Therefore, we recommend that you run the programs through the Linux subsystem for Windows 10 and follow the UNIX installation procedure above.
 
+### If you do not wish to use the Linux subsystem
+* Download python and jupyter, either separately or with anaconda.
+* Add python and jupyter to your PATH environment variable. On Windows 10, this is done by opening a file explorer; right-clicking on "This PC" and selecting properties > Advanced System Settings > Environment Variables > Select PATH and click edit, and then add the path to your python and jupyter installation. Move up or down accordingly so it does not get overwritten by other paths (by default, the Microsoft Store triggers when calling python, so you need to move that down).
+  * If you have installed anaconda: The default anaconda location is in your user's home folder. The python executable is in the highest level of the anaconda directory, and jupyter is in /Scripts/.
+
+* Now, download the Wolfram Engine at https://www.wolfram.com/engine/. Install it. The default directory is C:/Program Files/Wolfram Research/Wolfram Engine/12.2/. Add this to your path variable. Also, do not install wolframscript separately; it comes with the engine installation.
+
+* Run WolframKernel.exe and activate your free license.
+
+* Open an anaconda command prompt (search "Anaconda Prompt" in the start menu if you do not see it).
+
+* Clone the repository WolframLanguageForJupyter somewhere meaningful,
+
+`` git clone https://github.com/WolframResearch/WolframLanguageForJupyter.git `` 
+
+* Enter the directory `WolframLanguageForJupyter` and run the configuration script by calling
+
+`` wolframscript configure-jupyter.wls add ``
+
 # Running
 You can run the Wolfram Kernel through either Jupyter Labs or Jupyter Notebooks. Choose the one you prefer and launch it with
 
