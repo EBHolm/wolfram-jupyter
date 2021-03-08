@@ -11,10 +11,7 @@ Use this to run the Wolfram Engine locally through a Jupyter Notebook.
 
 For the next two prerequisites, you need a Wolfram account. If you do not have one already, you can create one at https://account.wolfram.com/login/create. You should also verify your e-mail.
 
-* **Wolfram Engine**: Download the free Wolfram Engine at https://www.wolfram.com/engine/, choosing the download that corresponds to your system. On mac, run the .dmg file and double click the download manager that appears in order to start the installation. After installation you need to activate the free license that comes with the product. To do so, simply run the Wolfram Kernel.
-
-
-* **wolframscript**: To install wolframscript, follow the guide at https://reference.wolfram.com/language/workflow/InstallWolframScript.html. Again, you must activate the free license by running `wolframscript` in the command line after installation. _Note_: To avoid some known problems, you should make sure to install and activate the Wolfram Engine before wolframscript.
+* **Wolfram Engine**: Download the free Wolfram Engine at https://www.wolfram.com/engine/, choosing the download that corresponds to your system. On mac, run the .dmg file and double click the download manager that appears in order to start the installation. After installation you need to activate the free license that comes with the product. To do so, simply run the Wolfram Kernel. A version of wolframscript should follow with this installation.
 
 ### Linking Wolfram Engine to Jupyter
 Go to a suitable folder and clone the repository
@@ -25,7 +22,13 @@ Enter the directory `WolframLanguageForJupyter` and run the configuration script
 
 `` ./configure-jupyter.wls add ``
 
-Note: If your Wolfram Engine path should ever change, you need to run the configuration script again.
+If this returns an error on the form _./WolframKernel: no such file_ or similar, you need to find the wolframscript executable and manually run that with the configuration script as input. The wolframscript executable is in the same folder as your Wolfram Engine, and on mac, by default it is in `/Applications/'Wolfram Engine.app'/Contents/Resources/'Wolfram Player.app'/Contents/MacOS/`. Hence, you should do 
+
+`` /Applications/'Wolfram Engine.app'/Contents/Resources/'Wolfram Player.app'/Contents/MacOS/wolframscript ~/path/to/WolframLanguageForJupyter/configure.jupyter.wls add ``
+
+If you are asked to activate wolframscript, do so by signing in with your Wolfram ID.
+
+_Note_: If your Wolfram Engine path should ever change, you need to run the configuration script again.
 
 ## Windows
 The Windows installation is slightly more involved. Therefore, we recommend that you run the programs through the Linux subsystem for Windows 10 and follow the UNIX installation procedure above.
