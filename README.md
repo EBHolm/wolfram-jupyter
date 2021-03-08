@@ -28,12 +28,12 @@ Enter the directory `WolframLanguageForJupyter` and run the configuration script
 Note: If your Wolfram Engine path should ever change, you need to run the configuration script again.
 
 ## Windows
-
+The Windows installation is slightly more involved. Therefore, we recommend that you run the programs through the Linux subsystem for Windows 10 and follow the UNIX installation procedure above.
 
 # Running
 You can run the Wolfram Kernel through either Jupyter Labs or Jupyter Notebooks. Choose the one you prefer and launch it with
 
-`` jupyter notebook `` or `` jupyter lab``
+`` jupyter notebook `` or `` jupyter lab ``
 
 in the command line. This should open a browser window. If you chose Notebooks, you can create a new notebook by pressing the "new" button in the top right corner of the UI; there, you should see the Wolfram Kernel as an option for the kernel you want to run the notebook on (instead of, e.g., Python). If you chose labs, you should see a Wolfram Kernel icon under the "Notebooks" category when creating a new project.
 
@@ -42,3 +42,20 @@ When in your Wolfram Kernel notebook, you can execute Mathematica commands like 
 For example notebooks showcasing basic Mathematica usage, refer to the notebooks in this repository.
 
 # License notes
+
+
+# Uninstalling
+## mac
+If you wish to uninstall Wolfram Engine or wolframscript, remove the relevant files in 
+* /Applications/Mathematica.app/
+* /Library/
+* ~/Library/
+* ~/Library/Wolfram/
+* ~/Library/Caches/
+
+## UNIX
+If you wish to uninstall Wolfram Engine or wolframscript, remove the relevant files in 
+* /usr/local/Wolfram/
+* /usr/share/
+* ~/.Wolfram/
+* ~/.cache/
