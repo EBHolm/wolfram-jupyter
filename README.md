@@ -39,5 +39,6 @@ in the command line. This should open a browser window. If you chose Notebooks, 
 
 When in your Wolfram Kernel notebook, you can execute Mathematica commands like `Plot[Hypergeometric2F1[3/4, 1, 5/4, -1/x^2],{x,0,10},PlotTheme->"Detailed"]` and `Integrate[q^2/(Exp[q]+1),{q,0,Infinity}]` by writing them in a cell and executing the cell by pressing `shift + enter`. The advantage in running through a notebook is the neat inherent workflow of notebooks and the availability of the graphics (contrary to simply running wolframscript through the command line).
 
+For example notebooks showcasing basic Mathematica usage, refer to the notebooks in this repository.
 
 # License notes
